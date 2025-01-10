@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 32px;
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        nav a {
+            font-size: 18px;
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: .3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #ff0000;
+        }
+
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        .content {
+            max-width: 600px;
+        }
+
+        .content h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #000;
+        }
+
+        .content h3 {
+            font-size: 32px;
+            color: #000;
+            margin: 20px 0 40px;
+        }
+
+        .content p {
+            color: #000;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #ff0000;
+            border-radius: 40px;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .5s;
+        }
+
+        .btn:hover {
+            background: #000;
+            box-shadow: 0 0 10px #ff0000;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 50px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .content h1 {
+                font-size: 36px;
+            }
+
+            .content h3 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i>KAIF_MADNI</i></a>
+        <nav>
+            <a href="Index.html" class="active">Home</a>
+            <a href="p1.html">portfolios</a>
+            <a href="p03.html">project No.01</a>
+            <a href="p.01.html">project No.02</a>
+            <a href="p.02.html">project No.03</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="content">
+            <h1>Hi, I'm Kaif Madni</h1>
+            <h3>Frontend Developer</h3>
+            <p>I'm a passionate frontend developer with expertise in HTML, CSS, and JavaScript. I love creating beautiful and responsive web applications that provide great user experiences.</p>
+            <a href="projects.html" class="btn">View My Work</a>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Design</title>
+    <head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #1f242d;
+            color: #fff;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            background: #2d333f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #00eeff;
+            text-decoration: none;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0,238,255,0.3);
+        }
+
+        nav a {
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 35px;
+            transition: 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #00eeff;
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            margin-top: 60px;
+            background: linear-gradient(45deg, #1f242d, #2d333f);
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #00eeff;
+            text-shadow: 0 0 10px rgba(0,238,255,0.3);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #00eeff;
+            color: #1f242d;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0,238,255,0.4);
+        }
+
+        .cta-button:hover {
+            background: #fff;
+            color: #00eeff;
+            transform: scale(1.05);
+        }
+
+        .portfolio-section {
+            padding: 80px 10%;
+            background: #2d333f;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #00eeff;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            background: #1f242d;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0,238,255,0.1);
+            transition: 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0,238,255,0.2);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio-item-content {
+            padding: 20px;
+        }
+
+        .portfolio-item h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #00eeff;
+        }
+
+        .portfolio-item p {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 50px;
+            }
+
+            nav a {
+                margin-left: 20px;
+                font-size: 16px;
+            }
+
+            .hero-content h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i>KAIF_MADNI</i></a>
+        <nav>
+            <a href="Index.html" class="active">Home</a>
+            <a href="p1.html">portfolios</a>
+            <a href="p03.html">project No.01</a>
+            <a href="p.01.html">project No.02</a>
+            <a href="p.02.html">project No.03</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm a passionate web developer creating beautiful and functional websites. Explore my work and let's build something amazing together.</p>
+            <a href="#portfolio" class="cta-button">View My Work</a>
+        </div>
+    </section>
+</body>
+</html>

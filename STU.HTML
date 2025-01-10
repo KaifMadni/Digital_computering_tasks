@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #000000, #1a0f3c, #2c0a2f);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .form-container {
+            width: 90%;
+            max-width: 900px;
+            padding: 50px;
+            background: rgba(20, 20, 35, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(138, 43, 226, 0.2);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(138, 43, 226, 0.2); }
+            to { box-shadow: 0 0 30px rgba(138, 43, 226, 0.4); }
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #b19cd9;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #4b0082;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #8a2be2;
+            box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #4b0082, #8a2be2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background: linear-gradient(45deg, #8a2be2, #4b0082);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+        }
+        h2 {
+            text-align: center;
+            color: #e6e6fa;
+            font-size: 32px;
+            margin-bottom: 40px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        select {
+            cursor: pointer;
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            padding-right: 30px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        input::placeholder,
+        textarea::placeholder {
+            color: #9370db;
+        }
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .form-container {
+                padding: 30px;
+                width: 95%;
+            }
+        }
+        .required-field::after {
+            content: '*';
+            color: #ff69b4;
+            margin-left: 4px;
+        }
+        .success-message {
+            display: none;
+            text-align: center;
+            color: #00ff9d;
+            margin-top: 20px;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+        }
+        option {
+            background: #1a0f3c;
+            color: #fff;
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.8) sepia(1) saturate(5) hue-rotate(230deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Student Registration</h2>
+        <form id="registrationForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="required-field" for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                </div>
+                <div class="form-group">
+                    <label class="required-field" for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="required-field" for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label class="required-field" for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="required-field" for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label class="required-field" for="gender">Gender</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="required-field" for="course">Select Course</label>
+                <select id="course" name="course" required>
+                    <option value="">Choose your course</option>
+                    <option value="computer-science">Computer Science & Engineering</option>
+                    <option value="mechanical">Mechanical Engineering</option>
+                    <option value="electrical">Electrical Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="it">Information Technology</option>
+                    <option value="chemical">Chemical Engineering</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="required-field" for="address">Current Address</label>
+                <textarea id="address" name="address" placeholder="Enter your complete address" required></textarea>
+            </div>
+
+            <button type="submit">Submit Registration</button>
+            <div class="success-message" id="successMessage">Registration submitted successfully!</div>
+        </form>
+    </div>  
+</body>
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('successMessage').style.display = 'block';
+        setTimeout(() => {
+            this.reset();
+            document.getElementById('successMessage').style.display = 'none';
+        }, 3000);
+    });
+</script>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Kaif Madni</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #1a1a1a;  /* Darker background */
+            color: #ffffff;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10%;
+            background: rgba(26, 26, 26, 0.9);  /* Semi-transparent dark header */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 25px;
+            color: #ff6b6b;  /* New accent color */
+            text-decoration: none;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+        }
+
+        nav a {
+            font-size: 18px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: .3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff6b6b;
+            transition: .3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #ff6b6b;
+        }
+
+        .home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+        }
+
+        .home-content {
+            max-width: 600px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .home-content h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .home-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+
+        .home-content p {
+            font-size: 16px;
+            margin: 20px 0 40px;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .btn-box {
+            display: flex;
+            justify-content: space-between;
+            width: 345px;
+            height: 50px;
+        }
+
+        .btn-box a {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 100%;
+            background: #ff6b6b;
+            border: 2px solid #ff6b6b;
+            border-radius: 25px;  /* More rounded buttons */
+            font-size: 19px;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s;
+            box-shadow: 0 0 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .btn-box a:hover {
+            color: #ff6b6b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 25px rgba(255, 107, 107, 0.5);
+        }
+
+        .btn-box a:nth-child(2) {
+            background: transparent;
+            color: #ff6b6b;
+        }
+
+        .btn-box a:nth-child(2):hover {
+            color: #1a1a1a;
+        }
+
+        .btn-box a:nth-child(2)::before {
+            background: #ff6b6b;
+        }
+
+        .btn-box a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #1a1a1a;
+            z-index: -1;
+            transition: .5s;
+        }
+
+        .btn-box a:hover::before {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><i>KAIF_MADNI</i></a>
+        <nav>
+            <a href="Index.html" class="active">Home</a>
+            <a href="p1.html">portfolios</a>
+            <a href="p03.html">project No.01</a>
+            <a href="p.01.html">project No.02</a>
+            <a href="p.02.html">project No.03</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi, I'm Kaif Madni</h1>
+            <h3>Frontend Developer</h3>
+            <p>I'm a passionate frontend developer with expertise in creating responsive and user-friendly web applications. 
+               I specialize in HTML, CSS, JavaScript, and modern frontend frameworks.</p>
+            <div class="btn-box">
+                <a href="projects.html">My Work</a>
+                <a href="contect.html">Let's Talk</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
